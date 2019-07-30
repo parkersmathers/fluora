@@ -1,10 +1,11 @@
 <% Object.entries(public.projects._data).forEach(function ([cardId, cardData]) { %>
   <% if (current.source === cardData.category) { %>
-    <a href="/projects/<%= Number(cardId) %>" class="<%= cardData.category %> card current">
+    <a href="/projects/<%= Number(cardId) %>" class="<%= cardData.category %> card current z1">
   <% } else { %>
     <a href="/projects/<%= Number(cardId) %>" class="<%= cardData.category %> card">
   <% } %>
-    <img class="card-image" src="<%= cardData.image %>" alt="<%= cardData.title %>">
-    <div class="<%= cardData.category %> <%= cardData.color %> card-overlay"></div>
+    <div class="<%= cardData.category %> <%= cardData.color %> card-overlay">
+      <img class="card-image" src="<%= cardData.image %>" alt="<%= cardData.title %>">
+    </div>
   </a>
 <% }) %>

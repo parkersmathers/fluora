@@ -7,24 +7,24 @@ For "breakable links", i.e., 2-word links that break across lines depending on w
 "u-l": Fancy underline is applied to links and controls spacing between underline and text
 -->
 <h1>
-  <span class="rollover">
+    <!--  portrait-break (p-br) is active in portrait view
+          landscape-break (l-br) is active in landscape view -->
     Fluora Studio is a design<br class="p-br"> service<br class="l-br"> specializing in<br class="p-br">
-    <a href="print-design" class="print-design u-l">print design,</a>
-    <a href="illustration" class="illustration u-l">illustration,</a><br>
-    <a href="identity-development" class="identity-development u-l">identity development,</a>
-    <br class="p-br">
-    <%# unbroken link visible in portrait view, hidden in landscape %>
-    <a href="exhibition-design" class="exhibition-design u-l p-br">exhibition design,</a>
-    <%# broken link visible in landscape view, hidden in portrait %>
-    <a href="exhibition-design" class="exhibition-design u-l u-l-x l-br">exhibition</a><br class="l-br">
-    <a href="exhibition-design" class="exhibition-design u-l l-br">design,</a>
-    <%# unbroken link visible in landscape view, hidden in portrait %>
-    <a href="special-projects" class="special-projects u-l l-br">special projects,</a>
-    <%# broken link visible in portrait view, hidden in landscape %>
-    <a href="special-projects" class="special-projects u-l u-l-x p-br">special</a><br class="p-br">
-    <a href="special-projects" class="special-projects u-l p-br">projects,</a>
-    <a href="animation" class="animation u-l">animation,</a><br class="l-br"> and<br class="p-br"> sometimes
-    <a href="art-commissions" class="art-commissions u-l">art commissions.</a>
-  </span><br>
-  Click <a href="projects" class="all-gray u-l u-l-x">here</a> to view some<br class="p-br"> samples of<br class="l-br"> our work.<br class="p-br"> Please <a href="contact" class="contact u-l u-l-x">contact us</a> if you’d<br> like to learn more.</span>
-</h1>
+    <span class="print-design f-b"><a href="print-design" class="print-design u-l hot">print design</a>,</span>
+    <span class="illustration f-b"><a href="illustration" class="illustration u-l hot">illustration</a>,</span><br>
+    <span class="identity-development f-b"><a href="identity-development" class="identity-development u-l hot">identity development</a>,</span><br class="p-br">
+    <span class="exhibition-design p-br f-b"><a href="exhibition-design" class="exhibition-design u-l hot">exhibition design</a>,</span>
+    <span class="exhibition-design f-b"><a href="exhibition-design" class="exhibition-design hot">
+      <span class="exhibition-design l-br"><span class="u-l">exhibition</span></span><br class="l-br">
+      <span class="exhibition-design l-br"><span class="u-l">design</span>,</span>
+    </a></span>
+    <span class="special-projects f-b"><a href="special-projects" class="special-projects hot">
+      <span class="special-projects p-br"><span class="u-l">special</span></span><br class="p-br">
+      <span class="special-projects p-br"> <span class="u-l">projects</span>,</span>
+    </a></span>
+    <span class="special-projects l-br f-b"><a href="special-projects" class="special-projects u-l hot">special projects</a>,</span>
+    <span class="animation f-b"><a href="animation" class="animation u-l hot">animation</a>,</span>
+    <br class="l-br"> and<br class="p-br"> sometimes
+    <span class="art-commissions f-b"><a href="art-commissions" class="art-commissions hot"><span class="u-l">art commissions</span></a>.</span>
+    <br>Click <span><a href="work.html" id="work" class="u-l">here</a></span> to view some<br class="p-br"> samples of<br class="l-br"> our work.<br class="p-br"> Please <span><a href="contact.html" class="contact u-l">contact us</a></span> if you’d<br> like to learn more.
+  </h1>

@@ -26,21 +26,15 @@
 
       <% } else { %>
 
-        <main id="container">
+        <div id="main">
           <%- yield %>
-        </main>
+        </div>
 
       <% } %>
 
       <%- partial('_includes/_footer') %>
     </div>
-    <% var source = current.source %>
-    <% if (source === 'index') { %>
-      <script src="/assets/js/rollover.js"></script>
-    <% } %>
-    <% var categories = ['print-design', 'illustration', 'identity-development', 'exhibition-design', 'special-projects', 'animation', 'art-commissions'] %>
-    <% if (categories.includes(source)) { %>
-      <script src="/assets/js/reveal.js"></script>
-    <% } %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

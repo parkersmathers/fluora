@@ -1,21 +1,23 @@
 $(function () {
+
   //
-  // LANDING view
-  // Handle mouse and touch events for links
+  // LANDING
+  // Handle mouse and touch events for landing links and touch cards
   //
 
   var touchCountLanding = 1
   var target
 
-  // Handle events for hovering over links and switching to Cards view
+  // Handle events for hovering over links and switching views
 
   $('h1 span').each(function () {
     var button = $(this)
     var link = button.find('a')
     var href = link.attr('href')
+    if (href === 'work.html') { href -= '.html' }
     var cards = $('#grid').find('.' + href + '')
 
-    // Handlers for touch events on links
+    // Handle touch events on links
 
     function handleOneTouchLinks(e) {
       if ($('.card-content').hasClass('all-gray')) {
@@ -47,19 +49,22 @@ $(function () {
       }
     }
 
-    // Handle touch and mouse events
-
     $(this).on( {
 
       'touchstart': function (e) {
         e.preventDefault()
-        e.stopPropagation()
         switch (touchCountLanding) {
           case 1: handleOneTouchLinks(e); break;
           case 2: handleTwoTouchesLinks(e); break;
           default: console.log('not supported'); break;
         }
-      },
+      }
+    }, '.hot')
+
+    // Handle mouse events
+
+    $(this).on( {
+
       'mouseover': function (e) {
         e.preventDefault()
         e.stopPropagation()
@@ -70,9 +75,9 @@ $(function () {
       'mouseout': function (e) {
         e.preventDefault()
         e.stopPropagation()
-        $('#landing').removeClass('z2')
-        cards.removeClass('current z1')
         button.removeClass('current z2')
+        cards.removeClass('current z1 touch-card')
+        $('#landing').removeClass('z2')
       },
       'click': function (e) {
         e.preventDefault()
@@ -84,6 +89,17 @@ $(function () {
       }
     }, '.hot')
   })
+
+  // Handle touch events on cards
+
+  $('#main').on( {
+    'touchstart': function (e) {
+      e.preventDefault()
+      $('#landing').removeClass('active z2').addClass('hidden')
+      $('.current').removeClass('current').addClass('active')
+      $('.touch-card').removeClass('touch-card').addClass('active z1')
+    }
+  }, '.touch-card')
 
   // Handle mouse and touch events on 'here' button
 
@@ -102,6 +118,7 @@ $(function () {
   $('#work').on( {
 
     'touchstart': function (e) {
+      // e.preventDefault()
       switch (touchCountHere) {
         case 1: handleOneTouchHere(e); break;
         case 2: handleTwoTouchesHere(e); break;
@@ -132,7 +149,7 @@ $(function () {
   })
 
   //
-  // GRID view
+  // GRID EVENTS
   //
 
   var cat, button, opaque, faded
@@ -165,7 +182,7 @@ $(function () {
     }
   }
 
-  $('main').on( {
+  $('#main').on( {
 
     'touchstart': function (e) {
       switch (touchCountGrid) {

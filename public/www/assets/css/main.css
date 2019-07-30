@@ -491,12 +491,20 @@ SLIDESHOW
 
 #slideshow {
   animation: fadein .7s ease;
+  width: 110vw;
   margin-left: -2vw;
   flex: 1;
+  align-self: flex-start;
   display: flex;
+  align-items: center;
+}
+
+#slideshow .row {
   overflow-x: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  flex: 1;
+  display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -506,7 +514,6 @@ SLIDESHOW
 }
 
 #slideshow .card {
-  flex-shrink: 0;
   padding: 1em;
   white-space: nowrap;
 }
