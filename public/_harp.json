@@ -1,6 +1,6 @@
 {
   "globals": {
-    "title": "Fluora Studio",
+    "sitename": "Fluora Studio",
     "url": "http://fluorastudio.com",
     "description": "Fluora Studio is a design service based in New York City specializing in print design, illustration, identity development, exhibition design, special projects, animation, and art commissions.",
     "google_analytics": ""
