@@ -1,0 +1,20 @@
+<%  var index = Number(current.source) - 1
+    var projects = Object.entries(public.projects._data)
+    var startProjects = projects.splice(index, 1)
+    var endProjects = projects.splice(0, index)
+    var concatProjects = startProjects.concat(projects, endProjects) %>
+
+<section id="slideshow">
+  <% concatProjects.forEach(function ([cardId, cardData]) { %>
+    <div class="<%= cardData.category %> card">
+      <div class="<%= cardData.color %> card-content">
+        <img class="card-image" src="<%= cardData.image %>" alt="<%= cardData.title %>">
+        <% if(cardData.award) { %>
+          <a href="<%= cardData.award %>" target="_blank" rel="noopener"><%= cardData.title %> . . .</a>
+        <% } else { %>
+          <p><%= cardData.title %></p>
+        <% } %>
+      </div>
+    </div>
+  <% }) %>
+</section>

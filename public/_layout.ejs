@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="<%= description %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<%= title %>">
+    <meta property="og:url" content="<%= url %>">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div id="page">
+
+      <%- partial('_includes/_header') %>
+
+      <% if (current.source === 'contact' || current.source === 'slideshow') { %>
+
+        <%- yield %>
+
+      <% } else { %>
+
+        <main id="container">
+          <%- yield %>
+        </main>
+
+      <% } %>
+
+      <%- partial('_includes/_footer') %>
+    </div>
+    <% var source = current.source %>
+    <% if (source === 'index') { %>
+      <script src="/assets/js/rollover.js"></script>
+    <% } %>
+    <% var categories = ['print-design', 'illustration', 'identity-development', 'exhibition-design', 'special-projects', 'animation', 'art-commissions'] %>
+    <% if (categories.includes(source)) { %>
+      <script src="/assets/js/reveal.js"></script>
+    <% } %>
+  </body>
+</html>

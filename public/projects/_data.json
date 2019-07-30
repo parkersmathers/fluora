@@ -1,0 +1,98 @@
+{
+  "1": {
+    "category": "print-design",
+    "color": "orchid",
+    "image": "/assets/images/fs1.jpg",
+    "title": "The New Emirati Britannica",
+    "award": "http://sharjahart.org/sharjah-art-foundation/publications/new-emirati-britannica-third-edition"
+  },
+  "2": {
+    "category": "exhibition-design",
+    "color": "teal",
+    "image": "/assets/images/fs2.gif",
+    "title": "Charles Dickens: The Key to Character",
+    "award": "https://segd.org/content/charles-dickens-key-character"
+  },
+  "3": {
+    "category": "illustration",
+    "color": "silver",
+    "image": "/assets/images/fs3.jpg",
+    "title": "The Rockefeller University – \"What Makes Us Human\" Illustration"
+  },
+  "4": {
+    "category": "print-design",
+    "color": "orchid",
+    "image": "/assets/images/fs4.jpg",
+    "title": "The NYPL Cullman Center – \"The Reservoir\""
+  },
+  "5": {
+    "category": "special-projects",
+    "color": "gold",
+    "image": "/assets/images/fs5.jpg",
+    "title": "NYU Global Programs — Window Dioramas"
+  },
+  "6": {
+    "category": "special-projects",
+    "color": "gold",
+    "image": "/assets/images/fs6.jpg",
+    "title": "NYU Global Programs — Sticker Series"
+  },
+  "7": {
+    "category": "art-commissions",
+    "color": "rose",
+    "image": "/assets/images/fs7.jpg",
+    "title": "The New Emirati Britannica",
+    "award": "https://gulflabor.org/2013/week-11-lynn-love-and-ann-sappenfield-50-celsius"
+  },
+  "8": {
+    "category": "exhibition-design",
+    "color": "teal",
+    "image": "/assets/images/fs8.jpg",
+    "title": "Three Faiths: Judaism, Christianity, Islam",
+    "award": "https://www.coexist.org/stories/new-york-public-library"
+  },
+  "9": {
+    "category": "identity-development",
+    "color": "blue",
+    "image": "/assets/images/fs9.jpg",
+    "title": "Social Science Research Council"
+  },
+  "10": {
+    "category": "illustration",
+    "color": "silver",
+    "image": "/assets/images/fs10.jpg",
+    "title": "The Rockefeller University – \"Science Goes 3-D\" Illustration"
+  },
+  "11": {
+    "category": "animation",
+    "color": "lemon",
+    "image": "/assets/images/fs11.gif",
+    "title": "NYU Q Magazine",
+    "award": "https://www.nyu.edu/admissions/undergraduate-admissions/life-at-nyu/nyu-q-winter2017.html"
+  },
+  "12": {
+    "category": "identity-development",
+    "color": "blue",
+    "image": "/assets/images/fs12.jpg",
+    "title": "Olena Visual Identity"
+  },
+  "13": {
+    "category": "print-design",
+    "color": "orchid",
+    "image": "/assets/images/fs13.jpg",
+    "title": "Lewis Thomas Prize"
+  },
+  "14": {
+    "category": "special-projects",
+    "color": "gold",
+    "image": "/assets/images/fs14.jpg",
+    "title": "The Rockefeller University – Circadian Clock Illustration",
+    "award": "https://www.nobelprize.org/prizes/medicine/2017/young/lecture/"
+  },
+  "15": {
+    "category": "identity-development",
+    "color": "blue",
+    "image": "/assets/images/fs15.jpg",
+    "title": "NYU Shanghai"
+  }
+}
