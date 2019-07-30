@@ -189,7 +189,7 @@ GRID
   background-color: rgb(182, 126, 119);
 }
 
-#grid .card .card-content.all-gray {
+#grid .card .card-overlay.all-gray {
   background-color: rgba(170, 170, 170, 0.2);
 }
 
