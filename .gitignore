@@ -1,16 +1,4 @@
 .DS_Store
-www
+./images
 node_modules
-/images
-/dist
-.publish
-/work
-/projects
-_harpold.json
-build
-gulpfileold.js
-old
 yarn.lock
-package.json
-package-lock.json
-gulpfile.js
