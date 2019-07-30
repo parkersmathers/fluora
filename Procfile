@@ -1,1 +1,1 @@
-web: cd /public/www && harp server --port $PORT
+web: cd public && harp server --port $PORT
