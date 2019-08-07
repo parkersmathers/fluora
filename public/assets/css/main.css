@@ -449,19 +449,19 @@ GRID
 #slideshow .card p,
 #slideshow .card a {
   display: block;
-  font-size: 1.9vh;
+  font-size: 1.5vh;
   line-height: 1.5;
   padding-left: .6vw;
   margin-top: .7vh;
 }
 
-@media screen and (orientation: portrait) and (min-width: 500px) {
+@media screen and (orientation: portrait) and (min-width: 750px) {
   #slideshow .card-image {
     width: 69vw;
   }
   #slideshow .card p,
   #slideshow .card a {
-    font-size: 1.9vh;
+    font-size: 1.5vh;
   }
 }
 
@@ -475,7 +475,7 @@ GRID
   }
   #slideshow .card p,
   #slideshow .card a {
-    font-size: 2.4vh;
+    font-size: 1.5vh;
   }
 }
 
@@ -491,7 +491,7 @@ GRID
   }
   #slideshow .card p,
   #slideshow .card a {
-    font-size: 2vh;
+    font-size: 1.7vh;
     line-height: 1.4;
   }
 }
