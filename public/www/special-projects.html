@@ -18,16 +18,16 @@
   <body>
     <div id="page">
 
-      <header id="header">
+      <nav id="nav">
   <h2>
     <a href="/">Fluora Studio</a>
   </h2>
-</header>
+</nav>
 
 
       
 
-        <main id="container">
+        <div id="main">
           <section id="landing" class="hidden special-projects">
   <!--
 For "breakable links", i.e., 2-word links that break across lines depending on whether the screen is portrait or landscape orientation:
@@ -38,27 +38,27 @@ For "breakable links", i.e., 2-word links that break across lines depending on w
 "u-l": Fancy underline is applied to links and controls spacing between underline and text
 -->
 <h1>
-  <span class="rollover">
+    <!--  portrait-break (p-br) is active in portrait view
+          landscape-break (l-br) is active in landscape view -->
     Fluora Studio is a design<br class="p-br"> service<br class="l-br"> specializing in<br class="p-br">
-    <a href="print-design" class="print-design u-l">print design,</a>
-    <a href="illustration" class="illustration u-l">illustration,</a><br>
-    <a href="identity-development" class="identity-development u-l">identity development,</a>
-    <br class="p-br">
-    
-    <a href="exhibition-design" class="exhibition-design u-l p-br">exhibition design,</a>
-    
-    <a href="exhibition-design" class="exhibition-design u-l u-l-x l-br">exhibition</a><br class="l-br">
-    <a href="exhibition-design" class="exhibition-design u-l l-br">design,</a>
-    
-    <a href="special-projects" class="special-projects u-l l-br">special projects,</a>
-    
-    <a href="special-projects" class="special-projects u-l u-l-x p-br">special</a><br class="p-br">
-    <a href="special-projects" class="special-projects u-l p-br">projects,</a>
-    <a href="animation" class="animation u-l">animation,</a><br class="l-br"> and<br class="p-br"> sometimes
-    <a href="art-commissions" class="art-commissions u-l">art commissions.</a>
-  </span><br>
-  Click <a href="projects" class="all-gray u-l u-l-x">here</a> to view some<br class="p-br"> samples of<br class="l-br"> our work.<br class="p-br"> Please <a href="contact" class="contact u-l u-l-x">contact us</a> if you’d<br> like to learn more.
-</h1>
+    <span class="print-design f-b"><a href="print-design" class="print-design u-l hot">print design</a>,</span>
+    <span class="illustration f-b"><a href="illustration" class="illustration u-l hot">illustration</a>,</span><br>
+    <span class="identity-development f-b"><a href="identity-development" class="identity-development u-l hot">identity development</a>,</span><br class="p-br">
+    <span class="exhibition-design p-br f-b"><a href="exhibition-design" class="exhibition-design u-l hot">exhibition design</a>,</span>
+    <span class="exhibition-design f-b"><a href="exhibition-design" class="exhibition-design hot">
+      <span class="exhibition-design l-br"><span class="u-l">exhibition</span></span><br class="l-br">
+      <span class="exhibition-design l-br"><span class="u-l">design</span>,</span>
+    </a></span>
+    <span class="special-projects f-b"><a href="special-projects" class="special-projects hot">
+      <span class="special-projects p-br"><span class="u-l">special</span></span><br class="p-br">
+      <span class="special-projects p-br"> <span class="u-l">projects</span>,</span>
+    </a></span>
+    <span class="special-projects l-br f-b"><a href="special-projects" class="special-projects u-l hot">special projects</a>,</span>
+    <span class="animation f-b"><a href="animation" class="animation u-l hot">animation</a>,</span>
+    <br class="l-br"> and<br class="p-br"> sometimes
+    <span class="art-commissions f-b"><a href="art-commissions" class="art-commissions hot"><span class="u-l">art commissions</span></a>.</span>
+    <br>Click <span><a href="work.html" id="work" class="u-l">here</a></span> to view some<br class="p-br"> samples of<br class="l-br"> our work.<br class="p-br"> Please <span><a href="contact.html" class="contact u-l">contact us</a></span> if you’d<br> like to learn more.
+  </h1>
 
 </section>
 
@@ -67,111 +67,126 @@ For "breakable links", i.e., 2-word links that break across lines depending on w
   
     <a href="/projects/1" class="print-design card">
   
-    <img class="card-image" src="/assets/images/fs1.jpg" alt="The New Emirati Britannica">
-    <div class="print-design orchid card-overlay"></div>
+    <div class="print-design orchid card-overlay">
+      <img class="card-image" src="/assets/images/fs1.jpg" alt="The New Emirati Britannica">
+    </div>
   </a>
 
   
     <a href="/projects/2" class="exhibition-design card">
   
-    <img class="card-image" src="/assets/images/fs2.gif" alt="Charles Dickens: The Key to Character">
-    <div class="exhibition-design teal card-overlay"></div>
+    <div class="exhibition-design teal card-overlay">
+      <img class="card-image" src="/assets/images/fs2.gif" alt="Charles Dickens: The Key to Character">
+    </div>
   </a>
 
   
     <a href="/projects/3" class="illustration card">
   
-    <img class="card-image" src="/assets/images/fs3.jpg" alt="The Rockefeller University – &#34;What Makes Us Human&#34; Illustration">
-    <div class="illustration silver card-overlay"></div>
+    <div class="illustration silver card-overlay">
+      <img class="card-image" src="/assets/images/fs3.jpg" alt="The Rockefeller University – &#34;What Makes Us Human&#34; Illustration">
+    </div>
   </a>
 
   
     <a href="/projects/4" class="print-design card">
   
-    <img class="card-image" src="/assets/images/fs4.jpg" alt="The NYPL Cullman Center – &#34;The Reservoir&#34;">
-    <div class="print-design orchid card-overlay"></div>
+    <div class="print-design orchid card-overlay">
+      <img class="card-image" src="/assets/images/fs4.jpg" alt="The NYPL Cullman Center – &#34;The Reservoir&#34;">
+    </div>
   </a>
 
   
-    <a href="/projects/5" class="special-projects card current">
+    <a href="/projects/5" class="special-projects card current z1">
   
-    <img class="card-image" src="/assets/images/fs5.jpg" alt="NYU Global Programs — Window Dioramas">
-    <div class="special-projects gold card-overlay"></div>
+    <div class="special-projects gold card-overlay">
+      <img class="card-image" src="/assets/images/fs5.jpg" alt="NYU Global Programs — Window Dioramas">
+    </div>
   </a>
 
   
-    <a href="/projects/6" class="special-projects card current">
+    <a href="/projects/6" class="special-projects card current z1">
   
-    <img class="card-image" src="/assets/images/fs6.jpg" alt="NYU Global Programs — Sticker Series">
-    <div class="special-projects gold card-overlay"></div>
+    <div class="special-projects gold card-overlay">
+      <img class="card-image" src="/assets/images/fs6.jpg" alt="NYU Global Programs — Sticker Series">
+    </div>
   </a>
 
   
     <a href="/projects/7" class="art-commissions card">
   
-    <img class="card-image" src="/assets/images/fs7.jpg" alt="The New Emirati Britannica">
-    <div class="art-commissions rose card-overlay"></div>
+    <div class="art-commissions rose card-overlay">
+      <img class="card-image" src="/assets/images/fs7.jpg" alt="The New Emirati Britannica">
+    </div>
   </a>
 
   
     <a href="/projects/8" class="exhibition-design card">
   
-    <img class="card-image" src="/assets/images/fs8.jpg" alt="Three Faiths: Judaism, Christianity, Islam">
-    <div class="exhibition-design teal card-overlay"></div>
+    <div class="exhibition-design teal card-overlay">
+      <img class="card-image" src="/assets/images/fs8.jpg" alt="Three Faiths: Judaism, Christianity, Islam">
+    </div>
   </a>
 
   
     <a href="/projects/9" class="identity-development card">
   
-    <img class="card-image" src="/assets/images/fs9.jpg" alt="Social Science Research Council">
-    <div class="identity-development blue card-overlay"></div>
+    <div class="identity-development blue card-overlay">
+      <img class="card-image" src="/assets/images/fs9.jpg" alt="Social Science Research Council">
+    </div>
   </a>
 
   
     <a href="/projects/10" class="illustration card">
   
-    <img class="card-image" src="/assets/images/fs10.jpg" alt="The Rockefeller University – &#34;Science Goes 3-D&#34; Illustration">
-    <div class="illustration silver card-overlay"></div>
+    <div class="illustration silver card-overlay">
+      <img class="card-image" src="/assets/images/fs10.jpg" alt="The Rockefeller University – &#34;Science Goes 3-D&#34; Illustration">
+    </div>
   </a>
 
   
     <a href="/projects/11" class="animation card">
   
-    <img class="card-image" src="/assets/images/fs11.gif" alt="NYU Q Magazine">
-    <div class="animation lemon card-overlay"></div>
+    <div class="animation lemon card-overlay">
+      <img class="card-image" src="/assets/images/fs11.gif" alt="NYU Q Magazine">
+    </div>
   </a>
 
   
     <a href="/projects/12" class="identity-development card">
   
-    <img class="card-image" src="/assets/images/fs12.jpg" alt="Olena Visual Identity">
-    <div class="identity-development blue card-overlay"></div>
+    <div class="identity-development blue card-overlay">
+      <img class="card-image" src="/assets/images/fs12.jpg" alt="Olena Visual Identity">
+    </div>
   </a>
 
   
     <a href="/projects/13" class="print-design card">
   
-    <img class="card-image" src="/assets/images/fs13.jpg" alt="Lewis Thomas Prize">
-    <div class="print-design orchid card-overlay"></div>
+    <div class="print-design orchid card-overlay">
+      <img class="card-image" src="/assets/images/fs13.jpg" alt="Lewis Thomas Prize">
+    </div>
   </a>
 
   
-    <a href="/projects/14" class="special-projects card current">
+    <a href="/projects/14" class="special-projects card current z1">
   
-    <img class="card-image" src="/assets/images/fs14.jpg" alt="The Rockefeller University – Circadian Clock Illustration">
-    <div class="special-projects gold card-overlay"></div>
+    <div class="special-projects gold card-overlay">
+      <img class="card-image" src="/assets/images/fs14.jpg" alt="The Rockefeller University – Circadian Clock Illustration">
+    </div>
   </a>
 
   
     <a href="/projects/15" class="identity-development card">
   
-    <img class="card-image" src="/assets/images/fs15.jpg" alt="NYU Shanghai">
-    <div class="identity-development blue card-overlay"></div>
+    <div class="identity-development blue card-overlay">
+      <img class="card-image" src="/assets/images/fs15.jpg" alt="NYU Shanghai">
+    </div>
   </a>
 
 
 </section>
-        </main>
+        </div>
 
       
 

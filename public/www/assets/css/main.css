@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Baton Turbo Regular';
   src: url('../fonts/BatonTurboWeb-Regular.eot') format('eot'),
-    url('../fonts/BatonTurboWeb-Regular.woff') format('woff');
+        url('../fonts/BatonTurboWeb-Regular.woff') format('woff');
 }
 
 html {
   font-size: 16px;
   line-height: 1.1;
   font-family: 'Baton Turbo Regular', Arial, Verdana, sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html, body {
@@ -17,11 +17,11 @@ html, body {
   height: 100%;
 }
 
-section, div, header, footer, form, ul {
+section, div, nav, footer, form, ul {
   display: block;
 }
 
-p, a, span, li, h1, h2, h3, h4 {
+p, li, h1, h2, h3, h4 {
   display: inline-block;
 }
 
@@ -34,6 +34,7 @@ ul, li {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -56,7 +57,7 @@ a {
   overflow: hidden;
 }
 
-header, footer, #landing {
+nav, footer, #landing {
   margin-left: 7vw;
 }
 
@@ -64,7 +65,7 @@ header, footer, #landing {
 HEADER & FOOTER
 */
 
-header, footer {
+nav, footer {
   width: 100%;
   height: 7vh;
   display: flex;
@@ -72,7 +73,7 @@ header, footer {
   justify-content: center;
 }
 
-header h2 {
+nav h2 {
   font-size: 5vw;
 }
 
@@ -85,75 +86,24 @@ footer p {
 }
 
 /*
-MAIN container -- landing and grid pages
+MAIN
 */
 
-main {
+#main {
   width: 100%;
   position: relative;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-/* stacking context for layering grid cards + landing text */
-
-#landing.active,
-#grid.active {
-  z-index: 2;
-}
-
-#landing a {
-  position: relative;
-}
-
-#grid.hidden.print-design .print-design,
-#grid.hidden.illustration .illustration,
-#grid.hidden.special-projects .special-projects,
-#grid.hidden.identity-development .identity-development,
-#grid.hidden.exhibition-design .exhibition-design,
-#grid.hidden.animation .animation,
-#grid.hidden.art-commissions .art-commissions {
-  z-index: 1;
-}
-
-#landing.hidden.print-design .print-design,
-#landing.hidden.illustration .illustration,
-#landing.hidden.identity-development .identity-development,
-#landing.hidden.exhibition-design .exhibition-design,
-#landing.hidden.special-projects .special-projects,
-#landing.hidden.animation .animation,
-#landing.hidden.art-commissions .art-commissions {
-  color: black;
-  pointer-events: none;
-  z-index: 2;
-}
-
-#landing.hidden {
-  color: transparent;
-}
-
-/* current-category links */
-
-.current {
-  cursor: pointer;
-}
-
-#landing.hidden h1 a.current,
-#landing.hidden h1 a.active {
-  pointer-events: none;
-}
-
-#landing.hidden .current {
-  color: inherit;
 }
 
 /*
 LANDING
 */
 
-#landing {
+#landing,
+#landing.hidden {
   width: 100%;
   position: absolute;
   margin-top: 3vh;
@@ -165,25 +115,17 @@ LANDING
 }
 
 .p-br {
-  display: inline-block; /* visible in portrait view */
+  display: inline; /* visible in portrait view */
 }
 
 .l-br {
   display: none; /* hidden in landscape view */
 }
 
-/* fancy underline */
-.u-l:after {
-  content: '';
-  display: block;
-  width: calc(100% - 2vw);
-  border-bottom: solid .05em;
-  margin-top: -12px;
-}
-
-/* fancy underline without trailing comma */
-.u-l-x:after {
-  width: 100%;
+.u-l {
+  display: inline-block;
+  border-bottom: solid .05em; /* fancy underline */
+  line-height: .8;
 }
 
 /*
@@ -198,152 +140,136 @@ GRID
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 2vw;
-  position: absolute;
 }
 
 #grid .card {
+  border: none;
   display: block;
-  width: 100%;
-  position: relative;
 }
 
-#grid .card .card-image {
-  display: block;
+#grid .card-image {
   width: 100%;
   height: auto;
+  min-height: 50px;
+  display: block;
 }
 
-#grid .card .card-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-}
-
-/* hide cards on landing page */
-
-#grid.hidden .card .card-overlay,
-#grid.hidden .card .card-image {
-  opacity: 0;
-}
-
-/* current cards -- 90% color overlay + 10% image */
-
-#grid.hidden .card.current .card-overlay {
-  opacity: 0.9;
-}
-
-#grid.hidden .card.current .card-image {
-  opacity: 0.1;
-}
-
-/* 100% image -- no color -- on grid page */
-
-#grid.active .card .card-image {
-  opacity: 1;
-}
-
-#grid.active .card .card-overlay {
-  opacity: 0;
+#grid.hidden .card-image {
+  opacity: .05;
 }
 
 /* card colors */
 
-#grid .card .card-overlay.orchid {
+#grid .orchid {
   background-color: rgb(210, 157, 198);
 }
 
-#grid .card .card-overlay.silver {
+#grid .silver {
   background-color: rgb(170, 170, 170);
 }
 
-#grid .card .card-overlay.blue {
+#grid .blue {
   background-color: rgb(145,174,196);
 }
 
-#grid .card .card-overlay.teal {
+#grid .teal {
   background-color: rgb(90, 171, 183);
 }
 
-#grid .card .card-overlay.gold {
+#grid .gold {
   background-color: rgb(154, 147, 120);
   border-radius: 50%;
 }
 
-#grid .card .card-overlay.lemon {
+#grid .lemon {
   background-color: rgb(209, 205, 110);
 }
 
-#grid .card .card-overlay.rose {
+#grid .rose {
   background-color: rgb(182, 126, 119);
 }
 
-/* 'here' link onmouseover -- toggle all cards gray */
-#grid.hidden .card .card-overlay.all-gray {
+#grid .card .card-overlay.all-gray {
   background-color: rgba(170, 170, 170, 0.2);
-  opacity: 0.9;
 }
 
-#grid.hidden .card:not(.current) {
-  pointer-events: none;
-}
+/**
+* jQuery play for landing-grid hover-toggle
+**/
 
-/* toggle color overlay on cards -- mouseover on category pages */
+/* colorized links */
 
-#grid.print-design .card.print-design.current .card-overlay.current,
-#grid.illustration .card.illustration.current .card-overlay.current,
-#grid.identity-development .card.identity-development.current .card-overlay.current,
-#grid.exhibition-design .card.exhibition-design.current .card-overlay.current,
-#grid.special-projects .card.special-projects.current .card-overlay.current,
-#grid.animation .card.animation.current .card-overlay.current,
-#grid.art-commissions .card.art-commissions.current .card-overlay.current {
-  opacity: 0;
-}
-
-#grid.print-design .card.print-design.current .card-image.current,
-#grid.illustration .card.illustration.current .card-image.current,
-#grid.identity-development .card.identity-development.current .card-image.current,
-#grid.exhibition-design .card.exhibition-design.current .card-image.current,
-#grid.special-projects .card.special-projects.current .card-image.current,
-#grid.animation .card.animation.current .card-image.current,
-#grid.art-commissions .card.art-commissions.current .card-image.current {
-  opacity: 1;
-}
-
-/* colorized category links */
-
-#landing .print-design.current {
+.print-design.current {
   color: rgb(210, 157, 198);
 }
 
-#landing .illustration.current {
+.illustration.current {
   color: rgb(170, 170, 170);
 }
 
-#landing .identity-development.current {
+.identity-development.current {
   color: rgb(145,174,196);
 }
 
-#landing .exhibition-design.current {
+.exhibition-design.current {
   color: rgb(90, 171, 183);
 }
 
-#landing .special-projects.current {
+.special-projects.current {
   color: rgb(154, 147, 120);
 }
 
-#landing .animation.current {
+.animation.current {
   color: rgb(209, 205, 110);
 }
 
-#landing .art-commissions.current {
+.art-commissions.current {
   color: rgb(182, 126, 119);
 }
 
-/* card order for portrait and landscape */
+.hidden {
+  visibility: hidden;
+}
+
+.active,
+.current {
+  visibility: visible;
+}
+
+.current {
+  cursor: pointer;
+  position: relative;
+}
+
+.z1 {
+  z-index: 1;
+}
+.z2 {
+  z-index: 2;
+}
+
+#landing.hidden h1 span.current,
+#landing.hidden h1 span.active {
+  pointer-events: none;
+}
+
+#landing.hidden .current {
+  color: inherit;
+}
+
+#grid.active .card-content.faded {
+  opacity: .1;
+}
+
+#grid.active .card.current .card-image {
+  opacity: .05;
+}
+
+#grid.active .card.current .card-content {
+  opacity: .9;
+}
+
+/* card order */
 
 @media screen and (orientation: portrait) {
   #grid > a:nth-child(1) {
@@ -393,15 +319,11 @@ GRID
   }
 }
 
-/*
-BREAK POINTS
-*/
-
 @media screen and (orientation: portrait) and (min-width: 500px) {
-  header {
+  nav {
     height: 10vh;
   }
-  header h2 {
+  nav h2 {
     font-size: 4vw;
   }
   #landing h1 {
@@ -431,18 +353,18 @@ BREAK POINTS
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 1vw;
   }
-  header, footer, #landing {
+  nav, footer, #landing {
     margin-left: 1vw;
   }
-  header, footer {
+  nav, footer {
     height: 10vh;
   }
-  header h2 {
+  nav h2 {
     font-size: 2.5vw;
   }
-  footer p {
-    /* font-size: 2vh; */
-  }
+  /* footer p {
+    font-size: 2vh;
+  } */
   #landing {
     margin-top: 2vh;
   }
@@ -450,20 +372,13 @@ BREAK POINTS
     font-size: 3.9vw;
     line-height: 1.4;
   }
-  /* fancy underline */
-  .u-l:after {
-    width: calc(100% - 1vw);
+  .u-l {
     border-bottom: solid .06em;
-    margin-top: -12px;
+    line-height: .8;
   }
-  .u-l-x:after {
-    width: 100%;
-  }
-  a > span.l-br,
   .l-br {
     display: inline-block;
   }
-  a > span.p-br,
   .p-br {
     display: none;
   }
@@ -473,7 +388,7 @@ BREAK POINTS
 }
 
 @media screen and (orientation: landscape) and (min-width: 750px) {
-  header h2 {
+  nav h2 {
     font-size: 4vh;
   }
   footer p {
@@ -485,9 +400,9 @@ BREAK POINTS
   }
 }
 
-/*
-SLIDESHOW
-*/
+/**
+* Slideshow
+**/
 
 #slideshow {
   animation: fadein .7s ease;
@@ -534,19 +449,19 @@ SLIDESHOW
 #slideshow .card p,
 #slideshow .card a {
   display: block;
-  font-size: 1.9vh;
+  font-size: 1.5vh;
   line-height: 1.5;
   padding-left: .6vw;
   margin-top: .7vh;
 }
 
-@media screen and (orientation: portrait) and (min-width: 500px) {
+@media screen and (orientation: portrait) and (min-width: 750px) {
   #slideshow .card-image {
     width: 69vw;
   }
   #slideshow .card p,
   #slideshow .card a {
-    font-size: 1.9vh;
+    font-size: 1.5vh;
   }
 }
 
@@ -560,7 +475,7 @@ SLIDESHOW
   }
   #slideshow .card p,
   #slideshow .card a {
-    font-size: 2.4vh;
+    font-size: 1.5vh;
   }
 }
 
@@ -576,14 +491,14 @@ SLIDESHOW
   }
   #slideshow .card p,
   #slideshow .card a {
-    font-size: 2vh;
+    font-size: 1.7vh;
     line-height: 1.4;
   }
 }
 
-/*
-CONTACT
-*/
+/**
+* Contact page
+**/
 
 .form-container {
   max-width: 900px;

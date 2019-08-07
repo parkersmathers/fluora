@@ -156,6 +156,8 @@ $(function () {
   var touchCountGrid = 1
   var targetGridCard
 
+  // Handle touch events on active cards
+
   function handleOneTouchGridCards(e) {
     e.preventDefault()
     if ((targetCard || $(e.currentTarget).hasClass('current')) && (targetCard !== e.currentTarget)) {
@@ -182,37 +184,39 @@ $(function () {
     }
   }
 
-  $('#main').on( {
+  // Handle events on active grid
 
-    'touchstart': function (e) {
-      switch (touchCountGrid) {
-        case 1: handleOneTouchGridCards(e); break;
-        case 2: handleTwoTouchesGridCards(e); break;
-        default: console.log('not supported'); break;
-      }
-    },
+  // $('#main').on( {
 
-    'mouseover': function(e) {
-      e.preventDefault()
-      e.stopPropagation()
-      cat = $(this).attr('class').split(' ').shift()
-      opaque = $('#grid').find('.' + cat + '').not(this).addClass('current z1')
-      faded = $('#grid').find('.card').not('.' + cat + '').find('.card-content').addClass('faded')
-      button = $('#landing').find('span.' + cat + '').addClass('current z2')
-    },
+  //   'touchstart': function (e) {
+  //     switch (touchCountGrid) {
+  //       case 1: handleOneTouchGridCards(e); break;
+  //       case 2: handleTwoTouchesGridCards(e); break;
+  //       default: console.log('not supported'); break;
+  //     }
+  //   },
 
-    'mouseout': function (e) {
-      e.preventDefault()
-      e.stopPropagation()
-      faded.removeClass('faded')
-      opaque.removeClass('current z1')
-      button.removeClass('current z2')
-    },
+  //   'mouseover': function(e) {
+  //     e.preventDefault()
+  //     e.stopPropagation()
+  //     cat = $(this).attr('class').split(' ').shift()
+  //     opaque = $('#grid').find('.' + cat + '').not(this).addClass('current z1')
+  //     faded = $('#grid').find('.card').not('.' + cat + '').find('.card-content').addClass('faded')
+  //     button = $('#landing').find('span.' + cat + '').addClass('current z2')
+  //   },
 
-    'click': function (e) {
+  //   'mouseout': function (e) {
+  //     e.preventDefault()
+  //     e.stopPropagation()
+  //     faded.removeClass('faded')
+  //     opaque.removeClass('current z1')
+  //     button.removeClass('current z2')
+  //   },
 
-    }
-  }, '#grid.active .card')
+  //   'click': function (e) {
+
+  //   }
+  // }, '#grid.active .card')
 
   //
   // CARDS view
