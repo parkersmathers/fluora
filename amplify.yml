@@ -17,7 +17,34 @@ frontend:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /public/www/
     files:
-      - "**/*"
+      - 'index.html'
+      - '404.html'
+      - 'animation.html'
+      - 'art-commissions.html'
+      - 'assets/#'
+      - 'contact.html'
+      - 'exhibition-design.html'
+      - 'identity-development.html'
+      - 'illustration.html'
+      - 'print-design.html'
+      - 'projects/index.html'
+      - 'projects/1.html'
+      - 'projects/2.html'
+      - 'projects/3.html'
+      - 'projects/4.html'
+      - 'projects/5.html'
+      - 'projects/6.html'
+      - 'projects/7.html'
+      - 'projects/8.html'
+      - 'projects/9.html'
+      - 'projects/10.html'
+      - 'projects/11.html'
+      - 'projects/12.html'
+      - 'projects/13.html'
+      - 'projects/14.html'
+      - 'projects/15.html'
+      - 'special-projects.html'
+      - 'work.html'
   cache:
     paths:
       - node_modules/**/*
