@@ -1,0 +1,23 @@
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm use $VERSION_NODE_8
+        - npm install
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands:
+        - cd public
+        - harp compile
+    postBuild:
+      commands:
+        - harp server --port 3000
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /public/www/
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
