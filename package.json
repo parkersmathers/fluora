@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Production version of fluorastudio.com",
   "scripts": {
+    "start": "cd public && harp server --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "harp": "*"
+    "harp": "^0.30.1"
   },
   "engines": {
     "node": "8.16.0"
