@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "aws-amplify": "^1.1.36",
-    "harp": "^0.30.1"
+    "aws-amplify": "^3.3.14",
+    "harp": "^0.33.0"
   },
   "engines": {
     "node": "8.16.0"
