@@ -28,7 +28,7 @@
   "5": {
     "category": "special-projects",
     "color": "gold",
-    "image": "/assets/images/fs5.jpg",
+    "image": "/assets/images/fs5new.jpg",
     "title": "NYU Global Programs — Window Dioramas"
   },
   "6": {
@@ -54,7 +54,7 @@
   "9": {
     "category": "identity-development",
     "color": "blue",
-    "image": "/assets/images/fs9.jpg",
+    "image": "/assets/images/fs9new.jpg",
     "title": "Social Science Research Council"
   },
   "10": {
@@ -66,7 +66,7 @@
   "11": {
     "category": "animation",
     "color": "lemon",
-    "image": "/assets/images/fs11.gif",
+    "image": "/assets/images/fs11new.gif",
     "title": "NYU Q Magazine",
     "award": "https://www.nyu.edu/admissions/undergraduate-admissions/life-at-nyu/nyu-q-winter2017.html"
   },
@@ -85,7 +85,7 @@
   "14": {
     "category": "special-projects",
     "color": "gold",
-    "image": "/assets/images/fs14.jpg",
+    "image": "/assets/images/fs14new.jpg",
     "title": "The Rockefeller University – Circadian Clock Illustration",
     "award": "https://www.nobelprize.org/prizes/medicine/2017/young/lecture/"
   },
