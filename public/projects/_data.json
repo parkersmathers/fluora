@@ -55,7 +55,8 @@
     "category": "identity-development",
     "color": "blue",
     "image": "/assets/images/fs9new.jpg",
-    "title": "Social Science Research Council"
+    "title": "The Rockefeller University – The Convergence of Science and Medicine",
+    "award": "https://convergence.rockefeller.edu"
   },
   "10": {
     "category": "illustration",
@@ -67,8 +68,8 @@
     "category": "animation",
     "color": "lemon",
     "image": "/assets/images/fs11new.gif",
-    "title": "NYU Q Magazine",
-    "award": "https://www.nyu.edu/admissions/undergraduate-admissions/life-at-nyu/nyu-q-winter2017.html"
+    "title": "NYU Q Magazine - Innovation Issue",
+    "award": "https://www.nyu.edu/employees/resources-and-services/media-and-communications/marketing-communications.html"
   },
   "12": {
     "category": "identity-development",
