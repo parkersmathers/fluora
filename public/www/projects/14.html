@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="Fluora Studio is a design service based in New York City specializing in print design, illustration, identity development, exhibition design, special projects, animation, and art commissions."
+      content="Fluora Studio was founded in 2015 to help create a better understanding of science and nature through design. We welcome collaborative projects of all sizes and are dedicated to doing work that has lasting benefit to our clients."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Fluora Studio" />
     <meta
       property="og:description"
-      content="Fluora Studio is a design service based in New York City specializing in print design, illustration, identity development, exhibition design, special projects, animation, and art commissions."
+      content="Fluora Studio was founded in 2015 to help create a better understanding of science and nature through design. We welcome collaborative projects of all sizes and are dedicated to doing work that has lasting benefit to our clients."
     />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
@@ -193,11 +193,9 @@
                   href="https://convergence.rockefeller.edu"
                   target="_blank"
                   rel="noopener"
-                  r
+                  >The Rockefeller University – The Convergence of Science and
+                  Medicine . . .</a
                 >
-                  The Rockefeller University – The Convergence of Science and
-                  Medicine . . .
-                </a>
               </div>
             </div>
 
@@ -221,14 +219,14 @@
                 <img
                   class="card-image"
                   src="/assets/images/fs11new.gif"
-                  alt="NYU Q Magazine"
+                  alt="NYU Q Magazine - Innovation Issue"
                 />
 
                 <a
-                  href="https://www.nyu.edu/admissions/undergraduate-admissions/life-at-nyu/nyu-q-winter2017.html"
+                  href="https://www.nyu.edu/employees/resources-and-services/media-and-communications/marketing-communications.html"
                   target="_blank"
                   rel="noopener"
-                  >NYU Q Magazine – Innovation Issue . . .</a
+                  >NYU Q Magazine - Innovation Issue . . .</a
                 >
               </div>
             </div>
@@ -261,8 +259,12 @@
       </div>
 
       <footer>
-        <p>&copy; 2019 Fluora Studio</p>
+        <p>&copy; <span id="year"></span> Fluora Studio</p>
       </footer>
+
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/assets/js/main.js"></script>
