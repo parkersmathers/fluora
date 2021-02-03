@@ -563,11 +563,6 @@ form ul li textarea {
   border: none;
 }
 
-form ul li legend {
-  margin-right: 3.5rem;
-  margin-bottom: 1.5rem;
-}
-
 form ul li input,
 form ul li textarea {
   background-color: rgba(170, 170, 170, 0.2);
