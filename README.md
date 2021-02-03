@@ -1,2 +1,3 @@
 # fluora-studio
-Source code for http://fluorastudio.com
+
+Source code for https://fluorastudio.com
