@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "aws-amplify": "^3.3.14",
-    "harp": "^0.33.0"
+    "harp": "^0.40.3"
   },
   "engines": {
     "node": "8.16.0"
